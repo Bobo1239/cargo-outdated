@@ -82,6 +82,7 @@ impl Options {
 
 fn main() {
     env_logger::init();
+    cargo::core::enable_nightly_features();
     let options = {
         let mut options: Options = Docopt::new(USAGE)
             .and_then(|d| {
